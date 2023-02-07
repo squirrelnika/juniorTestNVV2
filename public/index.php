@@ -8,7 +8,7 @@ use App\Router;
 $router = new Router();
 
 $router->get("/", function() {
-   require_once (__DIR__ . '/../views/index.php');
+   require_once (__DIR__ . '/../views/products.php');
 });
 
 $router->get("/about", function() {

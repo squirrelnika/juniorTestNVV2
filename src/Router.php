@@ -63,9 +63,9 @@ class Router
             }
         }
 
-        $callback();
-        // call_user_func_array($callback, [
-        //     array_merge($_GET, $_POST)
-        // ]);
+        // $callback();
+        call_user_func_array($callback, [
+            array_merge($_GET, $_POST)
+        ]);
     }
 }
