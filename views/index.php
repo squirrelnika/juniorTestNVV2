@@ -1,22 +1,20 @@
 <?php
   $title = 'Product List';
-  require_once 'partials/header.php';
-  require_once 'db/conn.php';
-  require_once 'productclass.php';
+  require_once (__DIR__ . '/../partials/header.php');
+  // require_once 'db/conn.php';
+  // require_once 'productclass.php';
 
-  if(isset($_POST["submit"]) && isset($_POST["name"])){
-    $productClass = $_POST['productType'];
-    $product = new $productClass($_POST);
-    $crud->insertProduct($product->getProduct());
-  }
+  // if(isset($_POST["submit"]) && isset($_POST["name"])){
+  //   $productClass = $_POST['productType'];
+  //   $product = new $productClass($_POST);
+  //   $crud->insertProduct($product->getProduct());
+  // }
 
-  if(isset($_POST["submit"]) && isset($_POST["delete"])){
-    foreach($_POST["delete"] as $prod){
-      $crud->deleteProduct($prod);
-    }
-  }
-
-  require_once 'fetchproducts.php';
+  // if(isset($_POST["submit"]) && isset($_POST["delete"])){
+  //   foreach($_POST["delete"] as $prod){
+  //     $crud->deleteProduct($prod);
+  //   }
+  // }
 ?>
 
 <nav class="navbar navbar-default bg-light">
@@ -31,7 +29,7 @@
   </div>
 </nav>
 
-<form action="index.php" method="POST" id="delete_form">
+<!-- <form action="index.php" method="POST" id="delete_form">
   <div class="container">
     <div class="row gx-5">
     <?php foreach($productList as $product) {
@@ -56,6 +54,6 @@
     <?php }?>
     </div>
   </div>
-</form>
+</form> -->
 
-<?php require_once 'partials/footer.php'; ?>
+<?php require_once (__DIR__ . '/../partials/footer.php'); ?>

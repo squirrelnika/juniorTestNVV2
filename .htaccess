@@ -1,6 +1,0 @@
-RewriteEngine On
-RewriteBase /<juniorTest>/
-RewriteRule ^index\.php＄ - [L]
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /juniorTest/index.php [L]

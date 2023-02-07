@@ -1,6 +1,6 @@
 <?php
     $title = 'Product Add';
-    require_once 'partials/header.php';
+    require_once (__DIR__ . '/../partials/header.php');
 ?>
 
 <nav class="navbar navbar-default bg-light">
@@ -10,12 +10,12 @@
       </div>
       <div>
         <button type="submit" form="product_form" class="btn btn-outline-info" name="submit">Save</button>
-        <a href="index.php"><button type="button" class="btn btn-outline-info">Cancel</button></a>   
+        <a href="/"><button type="button" class="btn btn-outline-info">Cancel</button></a>   
       </div>
     </div>
 </nav>
 
-<form class="row g-3 align-items-center ms-2" action="index.php" method="post" id="product_form">
+<form class="row g-3 align-items-center ms-2" action="/addproduct" method="post" id="product_form">
   <div class="col-4">
     <div class="row my-2">
       <div class="col-3"><label for="sku" class="form-label">SKU</label></div>
@@ -74,4 +74,4 @@
   
 </form>
 
-<?php require_once 'partials/footer.php'; ?>
+<?php require_once (__DIR__ . '/../partials/footer.php'); ?>
