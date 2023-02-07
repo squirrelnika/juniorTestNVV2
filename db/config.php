@@ -19,3 +19,5 @@ define('DB_PASSWORD', '');
 // $db = 'id19963475_junior_test';
 // $user = 'id19963475_nikavevere';
 // $pass = 'vL2yG!5U_ivBzIOB';
+
+// website password EIF@x&XI2*l*KLP$z%3R
