@@ -21,3 +21,5 @@ define('DB_PASSWORD', '');
 // $pass = 'vL2yG!5U_ivBzIOB';
 
 // website password EIF@x&XI2*l*KLP$z%3R
+
+// DataBase password NS}4oJ9oqMe[-(&y

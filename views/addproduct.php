@@ -15,7 +15,7 @@
     </div>
 </nav>
 
-<form class="row g-3 align-items-center ms-2" action="/addproduct" method="post" id="product_form">
+<form class="row g-3 align-items-center ms-2" method="post" id="product_form">
   <div class="col-4">
     <div class="row my-2">
       <div class="col-3"><label for="sku" class="form-label">SKU</label></div>

@@ -2,32 +2,21 @@
 
 require_once(__DIR__ . '/../vendor/autoload.php');
 
-use App\Handler\Contact;
+use App\Handler\ProductHandler;
 use App\Router;
 
 $router = new Router();
 
-$router->get("/", function() {
-   require_once (__DIR__ . '/../views/products.php');
-});
+$router->get("/", ProductHandler::class.'::getProductPage');
 
-$router->get("/about", function() {
-    echo "About Page";
-});
+$router->get("/addproduct", ProductHandler::class.'::getAddPage');
 
-$router->get("/contact", Contact::class.'::execute');
+$router->post("/addproduct", ProductHandler::class.'::postAddPage');
 
-$router->post("/contact", function ($params) {
-    var_dump($params);
-});
+// test with Contact page
+$router->get("/contact", ProductHandler::class.'::execute');
 
-$router->get("/addproduct", function(){
-    require_once (__DIR__ . '/../views/addproduct.php');
-});
-
-$router->post("/addproduct", function ($params) {
-    var_dump($params);
-});
+$router->post("/contact", ProductHandler::class.'::showContact');
 
 $router->addNotFoundHandler(function () {
     $title = 'Not Found!';
