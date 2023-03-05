@@ -54,8 +54,8 @@ class Database
         $statement->bindValue(':sku', $product->sku);
         $statement->bindValue(':name', $product->name);
         $statement->bindValue(':price', $product->price);
-        $statement->bindValue(':type', $product->productType);
-        $statement->bindValue(':typeAttribute', $product->typeAttribute);
+        $statement->bindValue(':type', $product->type);
+        $statement->bindValue(':typeAttribute', $product->value);
 
         $statement->execute();
     }
